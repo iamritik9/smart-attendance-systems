@@ -20,6 +20,7 @@ footer {
 
 .creators {
     margin-top: 5px;
+    transition: transform 0.3s;
 }
 
 @media (max-width: 768px) {
@@ -32,6 +33,7 @@ footer {
     footer {
         padding: 15px 0;
     }
+
     .creators {
         font-size: 0.9em;
     }
