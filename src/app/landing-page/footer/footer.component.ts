@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  ProjectName = "Smart Attendance System";
+  creatorNames = "Roshit | Manikanta | Ritik | Silpi | Hari | Sankar | Tarak | Chandu"
 }

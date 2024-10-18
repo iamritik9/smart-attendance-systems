@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  logoPath: string = 'assets/favicon.png';
+  name: string="Smart Attendance System";
 
+  login() {
+    console.log('Login button clicked');
+  }
 }

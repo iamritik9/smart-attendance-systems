@@ -1,0 +1,38 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.creators {
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .creators {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px 0;
+    }
+    .creators {
+        font-size: 0.9em;
+    }
+}
