@@ -1,0 +1,158 @@
+.heading{
+  text-align: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+  font-size: 3.5rem;
+  color:var(--black);
+}
+
+.heading span{
+
+  background:orange;
+  color: #fff;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.heading span{
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.75rem; 
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem; 
+    margin-bottom: 10px;
+  }
+
+  .heading span {
+    display: block; 
+    margin-top: 5px;
+  }
+}
+
+
+/* for cards */
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.left-content h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.left-content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.left-content .more {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.left-content .more:hover {
+  color: #0056b3;
+}
+
+.left-content ul {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.left-content ul.ng-star-inserted {
+  display: block;
+  opacity: 1;
+}
+
+.left-content ul li {
+  padding: 5px 0;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.right-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.right-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 0 0 10px 10px;
+}
+
+.feature:hover .right-content img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .feature {
+    width: 45%;
+  }
+}
+
