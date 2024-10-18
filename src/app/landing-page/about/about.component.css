@@ -1,0 +1,42 @@
+.about-container {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: flex-start; /* Align items at the start (top) */
+  padding: 20px;
+}
+
+.about-title {
+  width: 00%; /* Ensure the title takes full width */
+  text-align: left; /* Align the title to the left */
+  font-weight: bold; /* Make the title bold */
+  font-size: 2rem; /* Adjust size of the title */
+}
+
+.about-description {
+  width: 50%; /* Ensure the description takes up most of the left side */
+  padding-right: 20px; /* Add spacing to the right if needed for other content */
+  padding-top: 100px; /* Adjust the space above the description */
+  text-align: justify; /* Justify text to make it spaced evenly */
+  line-height: 1.8; /* Set line-height for even spacing between lines */
+}
+
+.about-description p {
+  margin-bottom: 20px; /* Add some space between paragraphs */
+  font-size: 1.1rem;
+  color: #333;
+  text-align: justify; /* Justify text in the paragraphs */
+  text-justify: inter-word; /* Ensures proper spacing between words */
+}
+
+.about-right {
+  width: 50%; /* Take up the remaining space on the right side */
+}
+
+.about-right img {
+  width: 70%; /* Reduce the image size to 80% of its container */
+  max-width: 400px; /* Ensure it doesn't get too large on big screens */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Adds rounded corners to the image */
+  display: block; /* Ensures it centers if needed */
+  margin: 0 auto; /* Center the image horizontally if it's smaller than the container */
+}
