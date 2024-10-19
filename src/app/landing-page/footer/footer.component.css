@@ -1,5 +1,5 @@
 footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: auto;
@@ -17,22 +17,55 @@ footer {
 }
 
 .creators {
-    margin-top: 2px;
+    margin-top: 5px;
     cursor: default;
 }
 
-@media (max-width: 768px) {
+.creators span a {
+    color: white;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.creators span a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    footer {
+        padding: 8px 0;
+    }
+
     .creators {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     footer {
         padding: 10px 0;
     }
 
     .creators {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    .creators {
         font-size: 0.9em;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 12px 0;
+    }
+
+    .creators {
+        font-size: 0.85em;
     }
 }
