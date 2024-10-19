@@ -1,23 +1,24 @@
 <header>
-    <section class="header-left">
-        <section class="header-logo">
-            <img [src]="logoPath" alt="Logo">
+    <nav class="header-container">
+        <section class="header-info">
+            <section class="header-logo">
+                <img [src]="logoPath" alt="Logo">
+            </section>
+            <section class="header-name">
+                <h1>{{ name }}</h1>
+            </section>
         </section>
-        <section class="header-name">
-            <h1>{{ name }}</h1>
-        </section>
-    </section>
-
-    <section class="header-right">
-        <nav>
-            <ul>
-                <li><a routerLink="/home" aria-label="Go to Home">Home</a></li>
-                <li><a routerLink="/about" aria-label="Learn more About us">About</a></li>
-                <li><a routerLink="/contact" aria-label="Contact us">Contact</a></li>
+        <section class="header-links">
+            <ul *ngFor="let Link of LinkDetails">
+                <li>
+                    <a [href]="Link.URL"> {{Link.Name}} </a>
+                </li>
             </ul>
-        </nav>
-        <section>
-            <button (click)="login()">Login</button>
         </section>
-    </section>
+        <section class="header-btn">
+            <button type="button" (click)="login()" aria-label="Login">
+                Login
+            </button>
+        </section>
+    </nav>
 </header>
