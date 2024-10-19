@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
-  declarations: [LandingPageComponent], 
-  imports: [CommonModule],
+  declarations: [], 
+  imports: [CommonModule,LandingPageComponent],
   exports: [LandingPageComponent]
 })
 export class LandingPageModule { }
