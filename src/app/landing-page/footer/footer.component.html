@@ -1,9 +1,14 @@
 <footer>
     <section class="copyright">
-        <small>COPYRIGHT &copy; 2024 {{ProjectName}}. All rights reserved.</small>
-
-        <section class="creators">
-            <span>Made by <span class="heart">&hearts;</span> {{creatorNames}}</span>
-        </section>
+        <small>&copy; {{currentYear}} {{ProjectName}}. All rights reserved.</small>
     </section>
+    <nav class="creators" aria-label="Developers">
+        <span>Developed by <span class="heart" aria-hidden="true">&hearts;</span></span>
+        <span *ngFor="let person of Details">
+            <a [href]="person.URL" target="_blank" rel="noopener noreferrer">
+                {{person.Name}}
+            </a>
+            {{person.Div}}
+        </span>
+    </nav>
 </footer>

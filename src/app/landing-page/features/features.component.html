@@ -1,15 +1,15 @@
-<section class="features" id="features">
-<h3 class="heading"> our <span>features</span></h3>
-
-<div class="features-container">
-    <div class="feature" *ngFor="let feature of features; let i = index">
-      <div class="left-content">
-        <h1>{{ feature.title }}</h1>
-        <p>{{ feature.description }}</p>
-      </div>
-      <div class="right-content">
-        <img [src]="feature.image" alt="{{ feature.title }}" />
-      </div>
+<section class="features">
+    <h1> Our <span> Features </span></h1>
+    <div class="container">
+        <article class="feature" *ngFor="let feature of features; let i = index">
+            <div class="top-container">
+                <h2>{{ feature.title }}</h2>
+                <p>{{ feature.description }}</p>
+            </div>
+            <div class="bottom-container">
+                <img [src]="feature.image" alt="{{ feature.title }}" loading="lazy" />
+            </div>
+        </article>
     </div>
   </div>
 </section>
