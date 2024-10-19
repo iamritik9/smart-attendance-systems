@@ -1,8 +1,6 @@
 .features {
   position: relative;
-  top: 100px;
   padding: 1rem 0;
-  border: 1px solid black;
 }
 
 .features h1 {
@@ -53,8 +51,8 @@
   overflow: hidden;
   padding: 1rem 0.5rem;
   border-radius: 15px;
-  transition: transform 0.3s ease-in, box-shadow 0.3s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .feature:hover {
@@ -68,7 +66,7 @@
   background-color: #f9f9f9;
 }
 
-.top-container h1 {
+.top-container h2 {
   font-size: 1.5rem;
   color: #333;
   text-align: center;
@@ -93,6 +91,7 @@
 @media (max-width: 768px) {
   .feature {
     width: 90%;
+    padding: 1rem;
   }
 }
 
