@@ -1,9 +1,13 @@
+/* General header styling */
 header {
     position: fixed;
     z-index: 1000;
     background-color: white;
+    width: 100%;
+    top: 0;
 }
 
+/* Flex container for header elements */
 .header-container {
     width: 100%;
     height: 100%;
@@ -14,27 +18,35 @@ header {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Flexbox for logo and name section */
 .header-info {
+    display: flex;
     gap: 10px;
-    display: flex;
+    align-items: center;
     padding: 5px;
-    align-items: center;
 }
 
-.header-logo {
-    display: flex;
-    align-items: center;
-}
-
+/* Logo styling */
 .header-logo img {
     width: 70px;
+    height: 70px;
     border-radius: 50%;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.header-name {
-    width: 80px;
-    text-align: left;
+/* Name styling */
+.header-name h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Link section styling */
+.header-links {
+    display: flex;
+    gap: 20px;
 }
 
 .header-links ul {
@@ -45,6 +57,20 @@ header {
     gap: 15px;
 }
 
+/* Individual link styling */
+.header-links ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header-links ul li a:hover {
+    color: darkgray;
+}
+
+/* Button styling */
 .header-btn button {
     color: white;
     cursor: pointer;
@@ -61,34 +87,29 @@ header {
     background-color: darkgreen;
 }
 
-.header-links {
-    display: flex;
-    gap: 20px;
-}
-
-.header-links ul li a {
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.header-links ul li a:hover {
-    /* font-weight: 600; */
-    color: darkgray;
-}
-
+/* Media query for smaller screens */
 @media (max-width: 768px) {
+    /* Make the header elements stack vertically */
     .header-container {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px;
     }
 
-    .header-name {
-        width: auto;
+    /* Adjust logo and name positioning */
+    .header-info {
+        width: 100%;
+        justify-content: space-between;
     }
 
+    /* Allow the name to adjust its size */
+    .header-name h1 {
+        font-size: 18px;
+    }
+
+    /* Make the nav links stack vertically */
     .header-links ul {
         flex-direction: column;
+        gap: 10px;
     }
 }
