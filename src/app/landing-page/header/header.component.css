@@ -1,98 +1,51 @@
-header {
-    position: sticky;
-    top: 0;
-    padding: 5px;
-    width: 100%;
-    height: 100px;
-    z-index: 1000;
+header.sticky-top {
     background-color: white;
-}
-
-.header-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding: 0 40px;
-    align-items: center;
-    justify-content: space-between;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.header-info {
-    gap: 10px;
-    display: flex;
-    padding: 5px;
-    align-items: center;
+.navbar {
+    padding: 10px 30px;
 }
 
-.header-logo {
-    display: flex;
-    align-items: center;
-}
-
-.header-logo img {
-    width: 70px;
+.navbar-brand img {
     border-radius: 50%;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
 }
 
-.header-name {
-    width: 80px;
-    text-align: left;
+.navbar-brand img:hover {
+    transform: scale(1.05);
 }
 
-.header-links ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 15px;
+.navbar-collapse {
+    background-color: white;
 }
 
-.header-btn button {
-    color: white;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 15px;
-    background-color: green;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.navbar-nav a {
+    padding: 10px 20px;
     transition: background-color 0.3s;
 }
 
-.header-btn button:hover {
-    background-color: darkgreen;
+.navbar-nav a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
-.header-links {
-    display: flex;
-    gap: 20px;
+.btn {
+    width: 90px;
 }
 
-.header-links ul li a {
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.header-links ul li a:hover {
-    /* font-weight: 600; */
-    color: darkgray;
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
+@media screen and (max-width: 500px) {
+    .navbar {
+        padding: 10px 20px;
     }
 
-    .header-name {
-        width: auto;
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
     }
 
-    .header-links ul {
-        flex-direction: column;
+    .navbar-brand img {
+        width: 60px;
+        height: 60px;
     }
 }

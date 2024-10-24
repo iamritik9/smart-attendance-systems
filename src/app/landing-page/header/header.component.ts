@@ -1,37 +1,28 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  logoPath: string = 'assets/favicon.png';
-  name: string = "Smart Attendance System";
+  logoUrl = './assets/images/Logo.jpg';
 
-  login() {
-    alert("Login Button Clicked");
+  name: any = '';
+  link: any = '';
+  menuItems = [
+    { name: 'Home', link: 'home' },
+    { name: 'About Us', link: 'about' },
+    { name: 'Features', link: 'features' },
+    { name: 'Services', link: 'services' },
+    { name: 'Contact', link: 'contact' },
+  ];
+
+  sendalert(){
+    alert("Hello");
   }
-
-  LinkDetails = [
-    {
-      Name: 'Home',
-      URL: "//",
-    },
-    {
-      Name: 'About',
-      URL: "//",
-    },
-    {
-      Name: 'Our Features',
-      URL: "//",
-    },
-    {
-      Name: 'Contact',
-      URL: "//",
-    }
-  ]
 }
