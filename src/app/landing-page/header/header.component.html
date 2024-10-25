@@ -13,6 +13,7 @@
                 <div class="navbar-nav ms-auto">
                     <a *ngFor="let item of menuItems" class="nav-link" [routerLink]="item.link"
                         [routerLinkActive]="['active']" aria-current="page">
+                        <i [class]="item.icon"></i>
                         {{ item.name }}
                     </a>
                     <button class="btn btn-outline-primary" (click)="sendalert()" aria-label="Login">
