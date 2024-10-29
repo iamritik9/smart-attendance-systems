@@ -4,11 +4,12 @@ import { HomeComponent } from '../home/home.component';
 import { FeaturesComponent } from '../features/features.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
+import { AboutComponent } from '../about/about.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent,HomeComponent,  FeaturesComponent, ContactComponent, FooterComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, FeaturesComponent, ContactComponent, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })

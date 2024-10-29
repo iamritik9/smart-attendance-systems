@@ -16,11 +16,11 @@ export class HeaderComponent {
   link: any = '';
   icon: any = '';
   menuItems = [
-    { name: 'Home', link: 'home', icon: 'fas fa-home' },
-    { name: 'About', link: 'about', icon: 'fas fa-info-circle' },
-    { name: 'Features', link: 'features', icon:'fas fa-star' },
-    { name: 'Services', link: 'services', icon:'fas fa-cogs' },
-    { name: 'Contact', link: 'contact', icon:'fas fa-phone' },
+    { name: 'Home', link: 'home' },
+    { name: 'About', link: 'about' },
+    { name: 'Features', link: 'features' },
+    { name: 'Services', link: 'services' },
+    { name: 'Contact', link: 'contact' },
   ];
 
   sendalert() {
