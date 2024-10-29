@@ -5,13 +5,33 @@
   <!-- Main Description on the left -->
   <section class="about-description">
     <p>
-      The Smart Attendance System utilizes advanced facial recognition technology to automatically and accurately track attendance for students, employees, or any organization.
-      This eliminates the need for manual attendance methods, streamlining the attendance process and improving overall security.
+      The Smart Attendance System utilizes advanced facial recognition technology to automatically and accurately track
+      attendance for students, employees, or any organization.
+      This eliminates the need for manual attendance methods, streamlining the attendance process and improving overall
+      security.
     </p>
-    <p>
-      Designed to be fast, efficient, and scalable, our system provides real-time updates and ensures the highest standards of data security.
-      Built with technologies like Angular, OpenCV, and TensorFlow, the system offers a seamless and reliable user experience, while maintaining the accuracy and privacy of user data.
-    </p>
+    Designed to be fast, <section class="collection bg-light position-relative py-5">
+      <div class="container">
+        <div class="row">
+          <h2 class="title-xlarge text-uppercase txt-fx domino">{{ title }}</h2>
+          <article class="collection-item d-flex flex-wrap my-5">
+            <div class="col-md-6 column-container">
+              <div class="image-holder">
+                <img [src]="imageUrl" alt="Classic winter collection clothing display" class="product-image img-fluid">
+              </div>
+            </div>
+            <div class="col-md-6 column-container bg-white">
+              <div class="collection-content p-5 m-0 m-md-5">
+                <h3 class="element-title text-uppercase">{{ attendanceSystemTitle }}</h3>
+                <p class="text-justify">{{ description1 }}</p>
+                <p class="text-justify">{{ description2 }}</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </section>
 
   <!-- Right side with Image -->
