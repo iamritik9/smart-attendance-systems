@@ -12,7 +12,7 @@ export class FooterComponent {
   currentYear: number = new Date().getFullYear();;
   projectName: string = "Smart Attendance System";
 
-  personDetails = [
+  developerDetails = [
     {
       Name: 'Roshit',
       URL: 'https://www.linkedin.com/in/yernagula-roshit',

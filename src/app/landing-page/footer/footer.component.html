@@ -1,16 +1,16 @@
-<footer class="bg-dark text-white text-center py-3">
+<footer class="footer text-center py-2">
     <div class="container">
-        <section class="copyright">
+        <section class="footer-copyright">
             <small>&copy; {{currentYear}} {{projectName}}. All rights reserved.</small>
         </section>
-        <nav class="creators mt-2" aria-label="Developers">
-            <span>Developed by <span class="heart" aria-hidden="true">&hearts;</span></span>
-            <span *ngFor="let person of personDetails" class="mx-1">
-                <a [href]="person.URL" target="_blank" rel="noopener noreferrer"
-                    class="text-white text-decoration-none">
-                    {{person.Name}}
+        <nav class="footer-creators mt-0.5" aria-label="Developers">
+            <span>Developed by <span class="footer-heart" aria-hidden="true">&hearts;</span></span>
+            <span *ngFor="let developer of developerDetails" class="mx-0.5">
+                <a [href]="developer.URL" target="_blank" rel="noopener noreferrer"
+                    title="Profile of {{developer.Name}}" class="footer-link">
+                    {{developer.Name}}
                 </a>
-                {{person.Div}}
+                {{developer.Div}}
             </span>
         </nav>
     </div>
