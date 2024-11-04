@@ -5,11 +5,12 @@ import { FeaturesComponent } from '../features/features.component';
 import { ContactComponent } from '../contact/contact.component';
 import { FooterComponent } from '../footer/footer.component';
 import { AboutComponent } from '../about/about.component';
+import { ServicesComponent } from '../services/services.component';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [HeaderComponent, HomeComponent, AboutComponent, FeaturesComponent, ContactComponent, FooterComponent],
+  imports: [HeaderComponent, HomeComponent, AboutComponent, FeaturesComponent, ServicesComponent, ContactComponent, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 })

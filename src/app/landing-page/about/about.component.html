@@ -1,19 +1,22 @@
-<section class="about-section bg-light position-relative py-5" role="complementary">
+<section class="about" aria-labelledby="about-header" role="complementary">
   <div class="container">
+    <header id="about-header" class="text-center">
+      <h2 class="about-header"><span>About</span></h2>
+    </header>
     <div class="row">
-      <h2 class="title-large text-uppercase about-header mb-4">{{ pageTitle }}</h2>
-      <article class="about-item d-flex flex-column-reverse flex-lg-row my-5" role="article">
-        <div class="col-12 col-lg-6 bg-white d-flex justify-content-center align-items-center">
-          <div class="content p-5 text-center">
-            <h3 class="element-title text-uppercase about-subheader">{{ sectionTitle }}</h3>
-            <div *ngFor="let desc of descriptions">
-              <p class="text-justify about-description">{{ desc }}</p>
-            </div>
+      <article class="about-item d-flex flex-column-reverse flex-lg-row my-2" aria-labelledby="sectionTitle">
+        <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          <div class="about-content p-2 text-center">
+            <h3 id="sectionTitle" class="element-title text-uppercase about-subheader">{{ sectionTitle }}
+            </h3>
+            <ng-container *ngFor="let desc of descriptions">
+              <p class="about-description">{{ desc }}</p>
+            </ng-container>
           </div>
         </div>
         <div class="col-12 col-lg-6 bg-white">
           <div class="image-holder d-flex justify-content-center">
-            <img [src]="imageUrl" alt="{{ pageTitle }}" class="about-image img-fluid custom-image">
+            <img [src]="imageUrl" [alt]="pageTitle" class="about-image img-fluid custom-image">
           </div>
         </div>
       </article>

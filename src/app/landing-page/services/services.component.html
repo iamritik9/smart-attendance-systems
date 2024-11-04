@@ -1,0 +1,16 @@
+<section id="services">
+    <div class="container">
+        <header id="services-header" class="text-center">
+            <h2 class="services-header"><span>Services</span></h2>
+        </header>
+        <div class="row services-items">
+            <div *ngFor="let service of services" class="col-12 service-item">
+                <div class="service-dot"></div>
+                <div class="service-content">
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

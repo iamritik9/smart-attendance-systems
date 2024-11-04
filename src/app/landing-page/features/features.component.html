@@ -1,14 +1,14 @@
 <section class="features">
-    <h1> Our <span> Features </span></h1>
-    <div class="container">
-        <article class="feature" *ngFor="let feature of features; let i = index">
-            <div class="top-container">
-                <h2>{{ feature.title }}</h2>
-                <p>{{ feature.description }}</p>
+    <header id="section-header" class="text-center">
+        <h2 class="section-header"><span>features</span></h2>
+    </header>
+    <div class="d-flex flex-wrap justify-content-around">
+        <div *ngFor="let feature of features" class="feature-card card m-2 col-12 col-sm-6 col-md-4 col-lg-3">
+            <img class="card-img-top" [src]="feature.image" [alt]="feature.alt">
+            <div class="card-body">
+                <h5 class="card-title">{{ feature.title }}</h5>
+                <p class="card-text">{{ feature.description }}</p>
             </div>
-            <div class="bottom-container">
-                <img [src]="feature.image" alt="{{ feature.title }}" loading="lazy" />
-            </div>
-        </article>
+        </div>
     </div>
 </section>

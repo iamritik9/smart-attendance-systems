@@ -1,0 +1,140 @@
+section {
+    margin: 10px 5px;
+    padding: 40px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    margin: 0 0 20px 0;
+}
+
+.services-header {
+    text-align: center;
+    font-size: clamp(24px, 5vw, 36px);
+}
+
+.services-header span {
+    color: white;
+    font-style: italic;
+    padding: 10px 40px;
+    background: orange;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+@media (max-width: 768px) {
+    .services-header span {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+.services-title {
+    color: #000;
+    margin: 20px 0;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services-items {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.services-items::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    left: calc(50% - 1px);
+    background-color: #0056b3;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+.service-item {
+    position: relative;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.service-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.service-item:nth-child(even) {
+    padding-left: calc(50% + 30px);
+}
+
+.service-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    border-radius: 50%;
+    background-color: #0056b3;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+}
+
+.service-content {
+    padding: 30px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #e7f1ff 30%, #cfe4ff 100%);
+}
+
+.service-content:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #cfe4ff 30%, #e7f1ff 100%);
+}
+
+.service-content h3 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+}
+
+.service-content p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@media(max-width: 1024px) {
+    .services-items {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+    .services-items::before {
+        left: 15px;
+    }
+
+    .service-content {
+        margin: 20px;
+    }
+
+    .service-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+
+    .service-item:nth-child(odd),
+    .service-item:nth-child(even) {
+        padding-left: 20px;
+    }
+
+    .service-dot {
+        left: calc(6px);
+    }
+}

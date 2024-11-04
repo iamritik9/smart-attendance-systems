@@ -1,25 +1,29 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<section id="home" class="home-carousel carousel slide" data-bs-ride="carousel" data-bs-pause="hover"
+  data-bs-interval="2000">
   <div class="carousel-indicators">
-    <button *ngFor="let image of images; let i = index" type="button" [attr.data-bs-target]="'#carouselExampleCaptions'"
-      [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)"></button>
+    <button *ngFor="let image of homeImages; let i = index" type="button" [attr.data-bs-target]="'#home'"
+      [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-label]="'Slide ' + (i + 1)">
+    </button>
   </div>
 
   <div class="carousel-inner">
-    <div class="carousel-item" *ngFor="let image of images; let i = index" [class.active]="i === 0">
-      <img [src]="image.src" class="d-block w-100" [alt]="image.alt" [attr.aria-labelledby]="'caption' + i">
-      <div class="carousel-caption d-none d-md-block" [id]="'caption' + i">
-        <h1>{{ image.title }}</h1>
-        <p>{{ image.description }}</p>
-      </div>
+    <div class="home-carousel__item carousel-item" *ngFor="let image of homeImages; let i = index"
+      [class.active]="i === 0">
+      <img [src]="image.src" class="d-block w-100" [alt]="image.alt" loading="lazy" aria-hidden="false">
     </div>
   </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <div class="home-carousel__caption">
+    <h1>{{ homeCaption }}</h1>
+    <p>{{ homeDescription }}</p>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</section>

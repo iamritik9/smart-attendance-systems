@@ -9,24 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  images = [
+  ImageUrl = "./assets/images/HomeImage2.jpg";
+  homeCaption = "Smart Attendance Made Simple";
+  homeDescription = "Utilizing cutting-edge technology, our Smart Attendance System automates attendance marking, providing you with accurate insights and streamlined workflows";
+
+  homeImages = [
     {
       src: "./assets/images/HomeImage1.jpg",
       alt: 'Image 1 description',
-      title: 'First Slide',
-      description: 'Placeholder content for the first slide.'
     },
     {
       src: './assets/images/HomeImage2.jpg',
       alt: 'Image 2 description',
-      title: 'Second Slide',
-      description: 'Placeholder content for the second slide.'
-    },
-    {
-      src: './assets/images/HomeImage3.jpg',
-      alt: 'Image 3 description',
-      title: 'Third Slide',
-      description: 'Placeholder content for the third slide.'
-    },
+    }
   ];
 }

@@ -1,102 +1,50 @@
-.features {
-  position: relative;
-  padding: 1rem 0;
+section {
+  margin: 10px 5px;
+  padding: 40px 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.features h1 {
+header {
+  margin: 20px 0 60px 0;
+}
+
+.section-header {
   text-align: center;
-  font-size: 3rem;
-  color: var(--black);
+  text-transform: capitalize;
+  font-size: clamp(24px, 5vw, 36px);
 }
 
-.features h1 span {
-  color: #fff;
-  font-size: 2.3rem;
+.section-header span {
+  color: white;
+  font-style: italic;
+  padding: 10px 40px;
   background: orange;
-  padding: 1rem 2rem;
-  display: inline-block;
-  clip-path: polygon(100% 0, 90% 50%, 100% 99%, 0% 100%, 10% 50%, 0% 0%);
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
 
 @media (max-width: 768px) {
-  .features h1 {
-    font-size: 1.75rem;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .features h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  .features h1 span {
+  .about-header span {
     display: block;
     margin-top: 5px;
   }
 }
 
-.container {
-  gap: 30px;
-  display: flex;
-  flex-wrap: wrap;
+.feature-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.features {
   padding: 2rem 0;
-  justify-content: center;
-}
-
-.feature {
-  width: 300px;
-  cursor: pointer;
-  overflow: hidden;
-  padding: 1rem 0.5rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease-in, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.feature:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.top-container,
-.bottom-container {
-  padding: 0 5px;
-  background-color: #f9f9f9;
-}
-
-.top-container h2 {
-  font-size: 1.5rem;
-  color: #333;
   text-align: center;
-  margin-bottom: 10px;
 }
 
-.top-container p {
-  font-size: 1rem;
-  color: #666;
-  text-align: justify;
-  margin-bottom: 10px;
-}
-
-.bottom-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .feature {
-    width: 90%;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .feature {
-    width: 45%;
-  }
+.feature-card {
+  max-width: 18rem;
 }
