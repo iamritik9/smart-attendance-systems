@@ -11,7 +11,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ms-auto">
-                    <a *ngFor="let menuItem of menuItems" class="nav-link" [routerLink]="menuItem.link"
+                    <a *ngFor="let menuItem of menuItems"  class="nav-link" [routerLink]="menuItem.link" [fragment]="menuItem.target"
                         [routerLinkActive]="['active']" aria-current="page" role="link">
                         <span>{{ menuItem.name }}</span>
                     </a>
