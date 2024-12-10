@@ -25,7 +25,7 @@ export class FooterComponent {
     },
     {
       Name: 'Ritik',
-      URL: 'https://www.linkedin.com/in/ritik-chandra-mishra/',
+      URL: 'https://www.linkedin.com/in/ritikchandramishra/',
       Div: '||',
     },
     {
