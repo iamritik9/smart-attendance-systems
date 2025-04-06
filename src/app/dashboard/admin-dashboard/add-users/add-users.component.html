@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Add User (Student/Faculty)</h2>
+
+  <form #userForm="ngForm" (ngSubmit)="addUser()">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="user.name" name="name" required #name="ngModel" />
+    <div *ngIf="name.invalid && name.touched" class="error">Name is required!</div>
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="user.email" name="email" required #email="ngModel" />
+    <div *ngIf="email.invalid && email.touched" class="error">Valid Email is required!</div>
+
+    <label>Role:</label>
+    <select [(ngModel)]="user.role" name="role" required #role="ngModel">
+      <option value="student">Student</option>
+      <option value="faculty">Faculty</option>
+    </select>
+    <div *ngIf="role.invalid && role.touched" class="error">Role is required!</div>
+
+    <div *ngIf="user.role === 'student'">
+      <label>Course:</label>
+      <input type="text" [(ngModel)]="user.course" name="course" required #course="ngModel" />
+      <div *ngIf="course.invalid && course.touched" class="error">Course is required!</div>
+
+      <label>Branch:</label>
+      <input type="text" [(ngModel)]="user.branch" name="branch" required #branch="ngModel" />
+      <div *ngIf="branch.invalid && branch.touched" class="error">Branch is required!</div>
+    </div>
+
+    <!-- Webcam Section -->
+    <button type="button" (click)="toggleWebcam()">Toggle Webcam</button>
+    <div *ngIf="webcamEnabled">
+      <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+      <button type="button" (click)="captureImage()">Capture Image</button>
+    </div>
+
+    <!-- Display Captured Image -->
+    <div *ngIf="capturedImage">
+      <h4>Captured Image:</h4>
+      <img [src]="capturedImage" width="200">
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid">Add User</button>
+  </form>
+</div>
+
+<style>
+  .error { color: red; font-size: 14px; }
+</style>

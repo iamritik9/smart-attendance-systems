@@ -1,0 +1,65 @@
+<div class="container mt-4">
+    <h2 class="text-center">Manage Attendance</h2>
+  
+    <!-- Search Bar -->
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by Student ID or Name"
+          [(ngModel)]="searchTerm"
+          (input)="filterAttendance()"
+        />
+      </div>
+    </div>
+  
+    <!-- Attendance Table -->
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-primary">
+          <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of paginatedAttendance">
+            <td>{{ record.studentId }}</td>
+            <td>{{ record.studentName }}</td>
+            <td>{{ record.date }}</td>
+            <td>
+              <select class="form-select" [(ngModel)]="record.status">
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn btn-success btn-sm" (click)="updateStatus(record, $event)">
+                Update
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Pagination -->
+    <nav>
+      <ul class="pagination">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="changePage(currentPage - 1)">Previous</a>
+        </li>
+        <li class="page-item" *ngFor="let page of totalPagesArray">
+          <a class="page-link" (click)="changePage(page)">{{ page }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" (click)="changePage(currentPage + 1)">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  

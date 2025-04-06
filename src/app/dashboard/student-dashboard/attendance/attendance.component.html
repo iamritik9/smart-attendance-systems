@@ -1,0 +1,18 @@
+<div class="attendance-container">
+    <h2>Attendance Report</h2>
+    <p>Total Attendance: <strong>{{ attendancePercentage }}%</strong></p>
+    
+    <div class="chart-container">
+      <canvas id="attendanceChart"></canvas>
+    </div>
+  
+    <ul class="attendance-list">
+      <li *ngFor="let record of attendanceRecords">
+        <span>{{ record.date }}</span>
+        <span [class.present]="record.status === 'Present'" [class.absent]="record.status === 'Absent'">
+          {{ record.status }}
+        </span>
+      </li>
+    </ul>
+  </div>
+  

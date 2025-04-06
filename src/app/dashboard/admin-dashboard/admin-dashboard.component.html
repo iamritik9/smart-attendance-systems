@@ -1,0 +1,100 @@
+<div class="dashboard-container">
+  <!-- Sidebar -->
+  <aside class="sidebar" [ngClass]="{ 'collapsed': isSidebarCollapsed }">
+    <div class="sidebar-logo">
+      <img src="assets/images/Logo.jpg" alt="EMS Logo">
+    </div>
+    <ul class="sidebar-menu">
+      <li>
+        <a routerLink="/dashboard/admin" routerLinkActive="active">
+          <i class="fas fa-home"></i> <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/add-users" routerLinkActive="active">
+          <i class="fas fa-user-plus"></i> <span>Add Users</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/user-management" routerLinkActive="active">
+          <i class="fas fa-users-cog"></i> <span>Manage Users</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/manage-attendance" routerLinkActive="active">
+          <i class="fas fa-user-check"></i> <span>Manage Attendance</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/generate-reports" routerLinkActive="active">
+          <i class="fas fa-file-download"></i> <span>Generate Reports</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/academic-calendar" routerLinkActive="active">
+          <i class="fas fa-calendar-alt"></i> <span>Academic Calendar</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/face-data" routerLinkActive="active">
+          <i class="fas fa-camera"></i> <span>Face Data Management</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/dashboard/admin/notifications" routerLinkActive="active">
+          <i class="fas fa-bell"></i> <span>Notifications</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <button class="menu-toggle" (click)="toggleSidebar()" aria-label="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navbar-title">
+        <h2>Admin Dashboard</h2>
+      </div>
+      <!-- Profile Section -->
+      <div class="profile-container" (click)="toggleProfileDropdown($event)">
+        <img src="assets/images/Logo.jpg" alt="Admin Avatar">
+        <span>{{ userName }}</span>
+      </div>
+
+      <!-- Profile Dropdown -->
+      <div *ngIf="showProfileDropdown" class="profile-dropdown">
+        <div class="profile-header">
+          <img src="assets/images/Logo.jpg" alt="Admin Profile">
+          <h4>{{ userName }}</h4>
+          <p>{{ userEmail }}</p>
+        </div>
+        <ul>
+          <li (click)="goToProfile()">
+            <i class="fas fa-user"></i> Profile
+          </li>
+          <li (click)="forgotPassword()">
+            <i class="fas fa-key"></i> Forgot Password
+          </li>
+          <li (click)="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Dashboard Icons -->
+    <div class="dashboard-icons">
+      <div class="icon-card" *ngFor="let item of dashboardItems" (click)="navigateTo(item.route)">
+        <i class="fas {{ item.icon }}"></i>
+        <p>{{ item.label }}</p>
+      </div>
+    </div>
+    
+
+    <!-- Router Outlet for Dynamic Content -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

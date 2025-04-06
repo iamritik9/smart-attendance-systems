@@ -1,0 +1,27 @@
+<div class="user-management-container">
+    <h2>Manage Users</h2>
+
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role | titlecase }}</td>
+                <td class="action-buttons">
+                    <button class="edit-btn" (click)="editUser(user)">✏️ Edit</button>
+                    <button class="delete-btn" (click)="deleteUser(user.id)">🗑️ Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

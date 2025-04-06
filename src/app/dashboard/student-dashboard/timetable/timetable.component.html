@@ -1,0 +1,22 @@
+<div class="timetable-container">
+    <h2>Weekly Timetable</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:15 - 12:15</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let day of timetable">
+          <td>{{ day.day }}</td>
+          <td>{{ day.slot1 }}</td>
+          <td>{{ day.slot2 }}</td>
+          <td>{{ day.slot3 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

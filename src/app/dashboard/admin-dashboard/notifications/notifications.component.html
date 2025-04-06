@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Notifications</h2>
+    <input #msg type="text" placeholder="Enter message">
+    <button (click)="sendNotification(msg.value)">Send</button>
+    <ul>
+      <li *ngFor="let notification of notifications">{{ notification }}</li>
+    </ul>
+  </div>
+  

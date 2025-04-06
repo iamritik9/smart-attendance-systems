@@ -1,29 +1,36 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  standalone: true,
+  imports: [CommonModule, RouterModule]
 })
 export class HeaderComponent {
   logoUrl = './assets/images/Logo.jpg';
+  showRoles = false; // Role selection initially hidden
 
-  name: any = '';
-  link: any = '';
-  icon: any = '';
   menuItems = [
-    { name: 'Home', link: '/Home', target: 'home' },
-    { name: 'About', link: '/About', target: 'about' },
-    { name: 'Features', link: '/Features', target: 'features' },
-    { name: 'Services', link: '/Services', target: 'services' },
-    { name: 'Contact', link: '/Contact', target: 'contact' },
+    { name: 'Home', link: '/home', target: 'home' },
+    { name: 'About', link: '/about', target: 'about' },
+    { name: 'Features', link: '/features', target: 'features' },
+    { name: 'Services', link: '/services', target: 'services' },
+    { name: 'Contact', link: '/contact', target: 'contact' }
   ];
 
-  sendalert() {
-    alert("Hello");
+  constructor(private router: Router) {}
+
+  toggleRoleSelection() {
+    this.showRoles = !this.showRoles;
   }
+
+  navigateToLogin(role: string) {
+    this.showRoles = false; // Hide role selection popup
+    this.router.navigate(['/login'], { queryParams: { role } });
+  }
+  
 }
